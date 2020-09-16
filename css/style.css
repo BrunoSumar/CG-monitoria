@@ -1,0 +1,71 @@
+/*
+    fundo #efefef
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    style: none;
+}
+
+body{
+    background-color: #eaeaea;
+}
+/*
+    Lateral
+*/
+#barra-lateral{
+    color: #181818;
+    height: 100%;
+    position: fixed;
+    background: red;
+    padding:1em 1em 0 1em;
+    background: #f6f6f6;
+
+}
+
+.titulo *{
+    font-size:4em;
+    font-weight: bolder;
+    line-height: 90%;
+}
+.titulo h3{
+    font-size:2.3em;
+    padding-bottom: 0.3em;
+}
+
+#barra-lateral hr{
+    border: 0;
+    border-top: solid #181818 5px;
+    padding: 0 0 3em 0;
+}
+
+#barra-lateral ul{
+    list-style: none;
+    background: white;
+
+}
+
+#barra-lateral li{
+    background: yellow;
+}
+
+/*
+        Centro
+*/
+
+#principal{
+    position: relative;
+    left: 12.3em;
+    top: 0.8em;
+    width: calc(100% - 12.4em);
+}
+
+#conteudo{
+    width: 95%;
+    margin: 0 auto;
+    border: solid blue 1px;
+    background: #f6f6f6;
+
+}
