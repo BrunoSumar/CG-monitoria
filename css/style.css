@@ -20,9 +20,8 @@ body{
     height: 100%;
     position: fixed;
     background: red;
-    padding:1em 1em 0 1em;
+    padding:1.5em 1em 0 1em;
     background: #f6f6f6;
-
 }
 
 .titulo *{
@@ -32,23 +31,49 @@ body{
 }
 .titulo h3{
     font-size:2.3em;
-    padding-bottom: 0.3em;
 }
 
 #barra-lateral hr{
     border: 0;
     border-top: solid #181818 5px;
-    padding: 0 0 3em 0;
+    margin: 0.4em 0 3em 0;
 }
 
 #barra-lateral ul{
     list-style: none;
-    background: white;
 
 }
 
-#barra-lateral li{
-    background: yellow;
+#barra-lateral ul li{
+    padding:0.3em 0 0 0.3em ;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    display:block;
+    height: 1.5em;
+    font-size: 1.4em;
+    overflow:hidden;
+}
+
+#barra-lateral ul li.submenu ul li{
+    border-left: solid 4px #181818;
+    margin: 0;
+    margin-left: 0.7em;
+    font-size: 0.8em;
+}
+
+@keyframes submenu-ras {
+  from {height: 1.2em; margin-bottom: 1em;}
+  to {height: 8.2em; margin-bottom: 0.3em;}
+}
+li.rasterizacao:hover{
+    animation-name: submenu-ras;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+#barra-lateral a {
+    color: #181818;
+    text-decoration: none;
 }
 
 /*
