@@ -96,7 +96,6 @@ li.rasterizacao:hover{
 #conteudo{
     width: 95%;
     margin: 0 auto;
-    border: solid blue 1px;
     background: #f6f6f6;
 
 }
@@ -119,7 +118,6 @@ li.rasterizacao:hover{
     height: 27vw;
     margin-right: 2em;
     float: left;
-    border: blue solid 1px;
 }
 
 canvas.par{
