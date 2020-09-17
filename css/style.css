@@ -1,5 +1,5 @@
 /*
-    fundo #efefef
+    Geral     fundo0 #eaeaea, fundo1 #f6f6f6, fonte #181818,
 */
 
 *{
@@ -19,7 +19,6 @@ body{
     color: #181818;
     height: 100%;
     position: fixed;
-    background: red;
     padding:1.5em 1em 0 1em;
     background: #f6f6f6;
 }
@@ -29,6 +28,7 @@ body{
     font-weight: bolder;
     line-height: 90%;
 }
+
 .titulo h3{
     font-size:2.3em;
 }
@@ -36,7 +36,7 @@ body{
 #barra-lateral hr{
     border: 0;
     border-top: solid #181818 5px;
-    margin: 0.4em 0 3em 0;
+    margin: 0.4em auto 3em auto;
 }
 
 #barra-lateral ul{
@@ -47,15 +47,26 @@ body{
 #barra-lateral ul li{
     padding:0.3em 0 0 0.3em ;
     line-height: 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: 0.4em;
     display:block;
-    height: 1.5em;
+    height: 1.4em;
     font-size: 1.4em;
+
     overflow:hidden;
 }
 
+#barra-lateral ul li *{
+    text-decoration: line-through;
+    color: #181818;
+}
+
+#barra-lateral ul li a {
+    color: #181818;
+    text-decoration: none;
+}
+
 #barra-lateral ul li.submenu ul li{
-    border-left: solid 4px #181818;
+    border-left: solid 3px #181818;
     margin: 0;
     margin-left: 0.7em;
     font-size: 0.8em;
@@ -63,17 +74,12 @@ body{
 
 @keyframes submenu-ras {
   from {height: 1.2em; margin-bottom: 1em;}
-  to {height: 8.2em; margin-bottom: 0.3em;}
+  to {height: 8.2em; margin-bottom: 0em;}
 }
 li.rasterizacao:hover{
     animation-name: submenu-ras;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
-}
-
-#barra-lateral a {
-    color: #181818;
-    text-decoration: none;
 }
 
 /*
@@ -93,4 +99,43 @@ li.rasterizacao:hover{
     border: solid blue 1px;
     background: #f6f6f6;
 
+}
+
+.exemplo {
+    overflow: auto;
+    padding: 5% 1em 5% 1em;
+    text-align: justify;
+}
+
+.exemplo h3{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+.exemplo canvas{
+    display: block;
+    width:55%;
+    height: 27vw;
+    margin-right: 2em;
+    float: left;
+    border: blue solid 1px;
+}
+
+canvas.par{
+    float: right;
+    margin-right: 0;
+    margin-left: 2em;
+}
+
+#conteudo hr{
+    border: 0;
+    border-top: solid #efefef 5px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#conteudo h2{
+    text-align: center;
+    text-decoration: underline;
 }

@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
+        <!-- Lateral -->
         <div id="barra-lateral">
             <div class="titulo">
                 <h1>CG</h1>
@@ -15,35 +16,41 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li class="submenu rasterizacao">
-                    Rasterização
+                    <p>Rasterização</p>
                     <ul>
-                        <li>Retas</li>
-                        <li>Circunferências</li>
-                        <li>Triangulos</li>
-                        <li>Curvas</li>
+                        <li><p>Retas</p></li>
+                        <li><p>Circunferências</p></li>
+                        <li><p>Triangulos</p></li>
+                        <li><p>Curvas</p></li>
                     </ul>
                 </li>
-                <li>Recorte</li>
-                <li>Transformações</li>
-                <li>Opengl</li>
+                <li><p>Recorte</p></li>
+                <li><p>Transformações</p></li>
+                <li><p>Opengl</p></li>
             </ul>
         </div>
+        <!-- Centro -->
         <div id="principal">
             <div id="conteudo">
                 <div class="exemplo">
+                    <canvas id="canvas" ></canvas>
                     <h3>Bem vindo ao CG monitoria!</h3>
-                    <canvas id="canvas" width="3" height="3"></canvas>
                     <p>Esse site é o projeto para monitoria voluntária de computação gráfica da UFF-RO.
                     O objetivo principal é servir de complemento às aulas oferecendo exemplos interativos referentes aos principais temas da disciplina.</p>
                 </div>
                 <hr>
+                <h2>Exemplos</h2>
                 <div class="exemplo">
-                    <canvas id="canvas" width="3" height="3"></canvas>
+                    <canvas id="canvas" class="par" width="3" height="3"></canvas>
+                    <h3>Exemplo dummy1!</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#">Veja mais</a>
                 </div>
                 <div class="exemplo">
                     <canvas id="canvas" width="3" height="3"></canvas>
+                    <h3>Exemplo dummy2!</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laborsde et dolore magna aliqua.</p>
+                    <a href="#">Veja mais</a>
                 </div>
 
 
