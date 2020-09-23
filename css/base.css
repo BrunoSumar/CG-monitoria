@@ -1,6 +1,11 @@
-/*
-    Geral     fundo0 #eaeaea, fundo1 #f6f6f6, fonte #181818,
-*/
+/*Arquivo css base*/
+
+
+/* --------------
+        Geral
+---------------*/
+
+/*fundo0 #e6e6e6, fundo1 #f6f6f6, fonte #181818*/
 
 *{
     padding: 0;
@@ -10,11 +15,13 @@
 }
 
 body{
-    background-color: #eaeaea;
+    background-color: #e6e6e6;
 }
-/*
-    Lateral
-*/
+
+/*---------------------
+    Barra na Lateral
+---------------------*/
+
 #barra-lateral{
     color: #181818;
     height: 100%;
@@ -72,6 +79,7 @@ body{
     font-size: 0.8em;
 }
 
+/*animações do menu */
 @keyframes submenu-ras {
   from {height: 1.2em; margin-bottom: 1em;}
   to {height: 8.2em; margin-bottom: 0em;}
@@ -82,9 +90,9 @@ li.rasterizacao:hover{
     animation-fill-mode: forwards;
 }
 
-/*
+/*---------------------
         Centro
-*/
+---------------------*/
 
 #principal{
     position: relative;
@@ -100,35 +108,21 @@ li.rasterizacao:hover{
 
 }
 
-.exemplo {
-    overflow: auto;
+.bloco {
     padding: 5% 1em 5% 1em;
     text-align: justify;
+    overflow: auto;
 }
 
-.exemplo h3{
+.bloco h3{
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 1.2em;
 }
 
-.exemplo canvas{
-    display: block;
-    width:55%;
-    height: 27vw;
-    margin-right: 2em;
-    float: left;
-}
-
-canvas.par{
-    float: right;
-    margin-right: 0;
-    margin-left: 2em;
-}
-
 #conteudo hr{
     border: 0;
-    border-top: solid #efefef 5px;
+    border-top: solid #e6e6e6 5px;
     width: 95%;
     margin: 0 auto;
 }
@@ -136,4 +130,34 @@ canvas.par{
 #conteudo h2{
     text-align: center;
     text-decoration: underline;
+}
+
+/* Configuraçao dos elementos que contem os canvas */
+
+.canvasHolder { /* Base parar crira canvas */
+    width: 50%;
+    height: 30vh;
+    display: block;
+    background-color: #e6e6e6;
+}
+
+.left { /* Posiciona canvas a esquerda */
+    float: left;
+    margin-right: 2em;
+    margin-left: 0;
+}
+
+.right { /* Posiciona canvas a direita */
+    float: right;
+    margin-right: 0;
+    margin-left: 2em;
+}
+
+.wide{ /* Largura máxima do canvas */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tall { /* Dobra altura do canvas */
+    height: 70vh;
 }

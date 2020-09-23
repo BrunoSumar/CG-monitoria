@@ -43,29 +43,35 @@ function esfera(x,y,r){
 }
 
 var x = [];
-var HEIGHT = 0;
-var WIDTH = 0;
-var tam = 100;
+var ch = document.getElementById("canvasEsfera");
+var quant = 75;
+var time = 0;
+var fRate = 31;
 
 function setup() {
-    var canvas = createCanvas(windowWidth/2.2,windowHeight/2.3);
-    canvas.parent('canvasEsfera');
-    HEIGHT = windowHeight;
-    WIDTH = windowWidth;
-    for(var i=1; i<tam;i++){
-      x.push(new esfera(width/2,height/2, height/30+random(height/30)));
+    var c = createCanvas(ch.offsetWidth,ch.offsetHeight);
+    c.parent("canvasEsfera");
+    background(246);
+
+    for(var i=1; i<quant;i++){
+      x.push(new esfera(width/2,height/2, height/20+random(height/30)));
     }
+
+    console.log(fRate);
+    fRate = 1000/fRate;
   }
 
 function draw() {
-  background(246);
-  for(i in x){
-    x[i].draw();
-  }
+    time+=deltaTime;
+    if(time>=fRate){
+        time-=fRate;
+        background(246);
+        for(i in x){
+            x[i].draw();
+        }
+    }
 }
 
-
-function mouseClicked(){
-  for(var i=0; i<tam-1;i++)
-       x[i].state = x[i].state == 1? 0:1;
+function windowResized() {
+  resizeCanvas(ch.offsetWidth, ch.offsetHeight);
 }
