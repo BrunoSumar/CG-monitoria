@@ -123,13 +123,46 @@ li.rasterizacao:hover{
 #conteudo hr{
     border: 0;
     border-top: solid #e6e6e6 5px;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
 }
 
 #conteudo h2{
     text-align: center;
     text-decoration: underline;
+    font-size: 2em;
+}
+
+#conteudo h4 {
+    margin-top: 1.5em;
+}
+
+#conteudo p {
+    margin: 1em 0;
+}
+
+#conteudo .codigo {
+    background: #efefef;
+    height: 100px;
+}
+
+#conteudo ul {
+    list-style: square;
+}
+
+#conteudo li {
+    text-decoration: none;
+    margin-left: 1.5em;
+}
+
+#conteudo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#conteudo a:hover {
+    text-decoration: underline;
+    color: black;
 }
 
 /* Configuraçao dos elementos que contem os canvas */
@@ -160,4 +193,59 @@ li.rasterizacao:hover{
 
 .tall { /* Dobra altura do canvas */
     height: 70vh;
+}
+
+/* Inputs */
+.controles{
+    text-align: left;
+}
+
+.controles p {
+    font-weight: bold;
+    display: inline;
+
+}
+
+.sliderHolder {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0.7em 0;
+}
+
+.slider {
+    display: inline-block;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #e0e0e0;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 7px;
+  height: 18px;
+  border: 0;
+  border-radius: 0;
+  background: #181818;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 7px;
+  height: 18px;
+  border: 0;
+  border-radius: 0;
+  background: #181818;
+  cursor: pointer;
 }

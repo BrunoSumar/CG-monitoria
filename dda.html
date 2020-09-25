@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+    <head>
+        <script src="./p5/p5.js"></script>
+        <script src="./p5/p5.dom.min.js"></script>
+        <script src="./p5/p5.sound.min.js"></script>
+        <meta charset="utf-8">
+        <title>Home - CG monitoria</title>
+        <link rel="stylesheet" href="./css/base.css">
+    </head>
+    <body>
+
+        <!-- Lateral -->
+        <div id="barra-lateral">
+            <div class="titulo">
+                <h1>CG</h1>
+                <h3>Monitoria</h3>
+            </div>
+            <hr>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li class="submenu rasterizacao">
+                    <p>Rasterização</p>
+                    <ul>
+                        <li><p>Retas</p></li>
+                        <li><p>Circunferências</p></li>
+                        <li><p>Triangulos</p></li>
+                        <li><p>Curvas</p></li>
+                    </ul>
+                </li>
+                <li><p>Recorte</p></li>
+                <li><p>Transformações</p></li>
+                <li><p>Opengl</p></li>
+            </ul>
+        </div>
+
+        <!-- Centro -->
+        <div id="principal">
+            <div id="conteudo">
+                <!-- separar conteudo em .blocos -->
+                <div class="bloco">
+                    <a class="path" href="./index.html">Home</a> /
+                    <a class="path" href="./rasterizacao.html">Rasterização</a>
+                    <a class="path" href="#">Rasterização</a>
+                </div>
+                <hr>
+                <div class="bloco">
+                    <h2>Rasterização de retas - Algoritmos DDA</h2>
+                    <p>O Digital Differential Analyser (DDA) é u algoritmo simples que nos permite escolher quais pizels da tela preencher (rasterizar) para representear uma reta graficamente.<br>
+                    O algoritmo funciona da seguinte maneira: um vez escolhidos os dois extremos do segmento de reta, encontramos a </p>
+                    
+                    <div class="codigo">
+
+                    </div>
+                    <div id="dda" class="canvasHolder wide tall">   </div>
+                    <div class="controles">
+                        <div class="sliderHolder">
+                            <p>Progresso:</p>
+                            <input type="range" min="0" max="100" name="status" class="slider" id="sp" value="0">
+                        </div>
+                        <div class="sliderHolder">
+                            <p>Tamanho da malha:</p>
+                            <input type="range" min="1" max="60" name="malha" class="slider" id="sm" value="30">
+                        </div>
+                        <p>Exibir Malha:</p>
+                        <input type="checkbox" name="exibirMalha" id="cm">
+                        <p>Progresso automático:</p>
+                        <input type="checkbox" name="pAuto" id="pa">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- javascript -->
+        <script src="./js/base.js"></script>
+        <script src="./js/retaDDA.js"></script>
+
+
+    </body>
+</html>
