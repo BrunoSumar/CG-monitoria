@@ -112,14 +112,8 @@ class Reta{
             point(this.extremos[0][0],this.extremos[0][1]);
             point(this.extremos[1][0],this.extremos[1][1]);
         };
-        textSize(22);
-        fill(50);
-        strokeWeight(1);
-        if(p != undefined)
-            text('Dx:'+this.dx+' Dy:'+this.dy+' Último ponto calculado: ('+p[0]+','+p[1]+')',width/15,14*height/15);
-        else
-            text('Dx:'+this.dx+' Dy:'+this.dy,width/15,14*height/15);
-
+        
+        return p;
     };
 
 

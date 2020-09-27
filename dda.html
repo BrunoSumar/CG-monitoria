@@ -37,37 +37,48 @@
         <!-- Centro -->
         <div id="principal">
             <div id="conteudo">
-                <!-- separar conteudo em .blocos -->
+
+                <!-- Breadcrumbs -->
                 <div class="bloco">
                     <a class="path" href="./index.html">Home</a> /
-                    <a class="path" href="./rasterizacao.html">Rasterização</a>
-                    <a class="path" href="#">Rasterização</a>
+                    <p class="path">Rasterização</p>
                 </div>
                 <hr>
+                <!-- separar conteudo em .blocos -->
                 <div class="bloco">
                     <h2>Rasterização de retas - Algoritmos DDA</h2>
                     <p>O Digital Differential Analyser (DDA) é u algoritmo simples que nos permite escolher quais pizels da tela preencher (rasterizar) para representear uma reta graficamente.<br>
                     O algoritmo funciona da seguinte maneira: um vez escolhidos os dois extremos do segmento de reta, encontramos a </p>
-                    
+
                     <div class="codigo">
 
                     </div>
+                    <!-- Canvas -->
                     <div id="dda" class="canvasHolder wide tall">   </div>
+                    <!-- output do canvas -->
+                    <div class="dadosCanvas" id="saidaDDA" >
+                        SAD
+                    </div>
+                    <!-- Controles do canvas -->
                     <div class="controles">
+                        <h4 class="sliderTitulo">Progresso:</h4>
                         <div class="sliderHolder">
-                            <p>Progresso:</p>
                             <input type="range" min="0" max="100" name="status" class="slider" id="sp" value="0">
                         </div>
+                        <h4 class="sliderTitulo">Tamanho da malha:</h4>
                         <div class="sliderHolder">
-                            <p>Tamanho da malha:</p>
                             <input type="range" min="1" max="60" name="malha" class="slider" id="sm" value="30">
                         </div>
-                        <p>Exibir Malha:</p>
-                        <input type="checkbox" name="exibirMalha" id="cm">
-                        <p>Progresso automático:</p>
-                        <input type="checkbox" name="pAuto" id="pa">
-                    </div>
 
+                        <h4 class="checkTitulo">Exibir Malha:</h4>
+                        <div class="checkHolder">
+                            <input type="checkbox" name="exibirMalha" id="cm">
+                        </div>
+                        <h4 class="checkTitulo">Progresso automático:</h4>
+                        <div class="checkHolder" >
+                            <input class="check" type="checkbox" name="pAuto" id="pa">
+                        </div>
+                    </div>
 
                 </div>
             </div>

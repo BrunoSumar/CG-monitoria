@@ -1,29 +1,37 @@
-
+// Rasterização de retas DDA
+// DOM
 var ch = document.getElementById("dda"); //canvas holder
 var sp = document.getElementById("sp"); //slider Progresso
 var sm = document.getElementById("sm"); // slider Malha
 var cm = document.getElementById("cm"); // checkbox malha
 var pa = document.getElementById("pa"); // checkbox malha
+var out = document.getElementById("saidaDDA");
+// framerate
 var fRate = 25; // seta framerate
 var time = 0; //auxiliar framerate
-var r; //reta
-var m; //malha
 // Variaveis de controle
 var desenhaMalha = true;
 var autoPlay = true;
 var velocidade = 0.5;
 var stat = parseFloat(sp.value);;
+//
+var r; //reta
+var m; //malha
 
 function setup() {
     var c = createCanvas(ch.offsetWidth,ch.offsetHeight);
     c.parent('dda');
-    cm.checked= true;
-    pa.checked= true;
+
+    sp.step = "0";
+    sm.step = "0";
+
+    cm.checked= desenhaMalha;
+    pa.checked= autoPlay;
+
     m = new Malha(parseFloat(sm.value));
     r = new Reta([width/5,4*height/5],[4*width/5,height/5]);
     r.malha = m;
     r.calculaPontos();
-
 
     fRate = 1000/fRate;
   }
@@ -57,10 +65,15 @@ function draw() {
         }
 
         if(cm.checked) //Desenha malha
-        m.draw();
+            m.draw();
 
-        r.drawDDA(parseFloat(sp.value)); //desenha a reta
+        var temp = r.drawDDA(parseFloat(sp.value)); //desenha a reta
 
+        //infos da reta no canvas
+        let saida = "Dx: "+r.dx+" Dy: "+r.dy;
+        if(temp!=undefined)
+            saida += " Último ponto: ("+temp[0]+","+temp[1]+")";
+        out.innerHTML = saida;
 
     }
 }

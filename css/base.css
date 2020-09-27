@@ -26,7 +26,7 @@ body{
     color: #181818;
     height: 100%;
     position: fixed;
-    padding:1.5em 1em 0 1em;
+    padding: 1.5em 1em 0 1em;
     background: #f6f6f6;
 }
 
@@ -73,7 +73,7 @@ body{
 }
 
 #barra-lateral ul li.submenu ul li{
-    border-left: solid 3px #181818;
+    border-left: solid 2.6px #181818;
     margin: 0;
     margin-left: 0.7em;
     font-size: 0.8em;
@@ -142,8 +142,23 @@ li.rasterizacao:hover{
 }
 
 #conteudo .codigo {
+    margin: 0.6em;
     background: #efefef;
     height: 100px;
+}
+
+#conteudo .controles{
+    text-align: left;
+    width: 100%;
+    padding: 1%;
+    display: inline-block;
+}
+
+#conteudo .dadosCanvas {
+    background: red;
+    margin: 0.6em 0;
+    height: 100%;
+    width: 100%;
 }
 
 #conteudo ul {
@@ -163,6 +178,11 @@ li.rasterizacao:hover{
 #conteudo a:hover {
     text-decoration: underline;
     color: black;
+}
+
+.path {
+    font-weight: 500;
+    display: inline;
 }
 
 /* Configuraçao dos elementos que contem os canvas */
@@ -196,21 +216,19 @@ li.rasterizacao:hover{
 }
 
 /* Inputs */
-.controles{
-    text-align: left;
-}
-
-.controles p {
-    font-weight: bold;
-    display: inline;
-
-}
 
 .sliderHolder {
     display: inline-block;
-    width: 100%;
+    width: 70%;
     padding: 0;
-    margin: 0.7em 0;
+    margin: 0;
+}
+
+.sliderTitulo {
+    font-weight: bold;
+    display: inline-block;
+    width: 28%;
+    margin: 0;
 }
 
 .slider {
@@ -248,4 +266,13 @@ li.rasterizacao:hover{
   border-radius: 0;
   background: #181818;
   cursor: pointer;
+}
+
+.checkTitulo {
+    display: inline-block;
+}
+
+.checkHolder {
+    display: inline-block;
+    margin: 0 0.2em 0 0.2em;
 }
