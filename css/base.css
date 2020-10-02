@@ -97,7 +97,7 @@ li.rasterizacao:hover{
 #principal{
     position: relative;
     left: 12.3em;
-    top: 0.8em;
+    padding: 0.8em 0 .8em 0;
     width: calc(100% - 12.4em);
 }
 
