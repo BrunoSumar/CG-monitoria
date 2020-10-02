@@ -120,6 +120,11 @@ li.rasterizacao:hover{
     margin-bottom: 1.2em;
 }
 
+.breadcrumbs {
+    padding: .5em 1em;
+    text-align: left;
+}
+
 #conteudo hr{
     border: 0;
     border-top: solid #e6e6e6 5px;
@@ -144,7 +149,6 @@ li.rasterizacao:hover{
 #conteudo .codigo {
     margin: 0.6em;
     background: #efefef;
-    height: 100px;
 }
 
 #conteudo .controles{
@@ -155,10 +159,11 @@ li.rasterizacao:hover{
 }
 
 #conteudo .dadosCanvas {
-    background: red;
+    background: #181818;
     margin: 0.6em 0;
     height: 100%;
-    width: 100%;
+    color:  #f6f6f6;
+    padding: .5em;
 }
 
 #conteudo ul {
@@ -274,5 +279,5 @@ li.rasterizacao:hover{
 
 .checkHolder {
     display: inline-block;
-    margin: 0 0.2em 0 0.2em;
+    margin: 0 2.2em 0 0.2em;
 }

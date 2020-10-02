@@ -29,7 +29,7 @@ function setup() {
     pa.checked= autoPlay;
 
     m = new Malha(parseFloat(sm.value));
-    r = new Reta([width/5,4*height/5],[4*width/5,height/5]);
+    r = new Reta([width/2, height/2],[4*width/5,height/5]);
     r.malha = m;
     r.calculaPontos();
 
@@ -70,14 +70,23 @@ function draw() {
         var temp = r.drawDDA(parseFloat(sp.value)); //desenha a reta
 
         //infos da reta no canvas
-        let saida = "Dx: "+r.dx+" Dy: "+r.dy;
+        let saida = "P1=("+r.extremos[0]+"), P2=("+r.extremos[1]+")";
+        saida += "<br> Dx: "+r.dx+", Dy: "+r.dy;
         if(temp!=undefined)
-            saida += " Último ponto: ("+temp[0]+","+temp[1]+")";
+            saida += ", Último ponto: ("+temp[0]+","+temp[1]+")";
         out.innerHTML = saida;
 
     }
 }
 
 function windowResized() {
-  resizeCanvas(ch.offsetWidth, ch.offsetHeight);
+    resizeCanvas(ch.offsetWidth, ch.offsetHeight);
+    r.extremos[0]=[width/2, height/2];
+    r.calculaPontos();
+}
+
+function mouseClicked() {
+    if(mouseX>0 && mouseX<width && mouseY>0 && mouseY<height)
+        r.extremos[1]=[mouseX, mouseY];
+    r.calculaPontos();
 }
