@@ -22,7 +22,7 @@
                 <li class="submenu rasterizacao">
                     <a class="path" href="./rasterizacao.html">Rasterização</a>
                     <ul>
-                        <li><p>Retas</p></li>
+                        <li><a href="rasterizacao.html#retas">Retas</a></li>
                         <li><p>Circunferências</p></li>
                         <li><p>Triangulos</p></li>
                         <li><p>Curvas</p></li>
@@ -42,44 +42,23 @@
                 <div class="breadcrumbs">
                     <a class="path" href="./index.html">Home</a> /
                     <a class="path" href="./rasterizacao.html">Rasterização</a> /
-                    <p class="path">DDA</p>
+                    <p class="path">Scanline</p>
                 </div>
                 <hr>
                 <!-- separar conteudo em .blocos -->
                 <div class="bloco">
-                    <h2>Rasterização de retas - Algoritmo DDA</h2>
-                    <p> O Digital Differential Analyser (DDA) é um algoritmo simples que nos permite escolher quais pixels da tela preencher (rasterizar) para representear uma reta graficamente.<br>
-                    O algoritmo funciona da seguinte maneira: uma vez escolhidos os dois extremos do segmento de reta, determinamos em qual eixo os ponstos estão mais distantes. Calculamos a variação das coordenadas dos pontos da reta e percorremos esse eixo adicionando as variações ao ponto inicial até que o segmento de reta esteja totalmente preenchido.
+                    <h2>Rasterização de tirnagulos - Algoritmo scanline</h2>
+                    <p> .<br>
+                    O algoritmo funciona da seguinte maneira:
                         Abaixo você pode conferir um pseudo-código desse algoritmo e um exemplo interativo de sua execução.</p>
 
                     <div class="codigo">
-                        DDA()<br>
-                        {<br>
-                            //  Pontos extremos da reta<br>
-                            var ponto1 = {x:x1, y:y1}, ponto2 = {x:x2, y:y2};<br>
-                            //  Distância dos extremos nos eixos x e Y<br>
-                            var dx = ponto2.x - ponto1.x, dy = ponto2.y - ponto1.y;<br>
-                            //  Escolha da maior distância<br>
-                            var delta = Max(dx, dy);<br>
-                            //  Calculo da variaçao de x e y<br>
-                            dx /= delta;<br>
-                            dy /= delta;<br>
-                            //  Loop percorrendo a maior distância<br>
-                            var x = ponto1.x, y = ponto1.y;<br>
-                            var listaDePontos = [];<br>
-                            for(var i=0;i<=delta;i++){<br>
-                                listaDePontos.push([x,y]);<br>
-                                //  incremento da variação<br>
-                                x = x + dx;<br>
-                                y = y + dy;<br>
-                            }<br>
-                            return listaDePontos;<br>
-                        };<br>
+
                     </div>
                     <!-- Canvas -->
-                    <div id="dda" class="canvasHolder wide tall">   </div>
+                    <div id="scanline" class="canvasHolder wide tall">   </div>
                     <!-- output do canvas -->
-                    <div class="dadosCanvas" id="saidaDDA" >
+                    <div class="dadosCanvas" id="saidaSL" >
                     </div>
                     <!-- Controles do canvas -->
                     <div class="controles">
@@ -89,7 +68,7 @@
                         </div>
                         <h4 class="sliderTitulo">Tamanho da malha:</h4>
                         <div class="sliderHolder">
-                            <input type="range" min="1" max="60" name="malha" class="slider" id="sm" value="30">
+                            <input type="range" min="4" max="60" name="malha" class="slider" id="sm" value="30">
                         </div>
 
                         <label  for="cm" class="checkTitulo"><h4>Exibir Malha:</h4></label>
@@ -107,7 +86,7 @@
         </div>
         <!-- javascript -->
         <script src="./js/base.js"></script>
-        <script src="./js/retaDDA.js"></script>
+        <script src="./js/scanline.js"></script>
 
 
     </body>

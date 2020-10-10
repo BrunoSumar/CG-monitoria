@@ -49,7 +49,6 @@ body{
 
 #barra-lateral ul{
     list-style: none;
-
 }
 
 #barra-lateral ul li{
@@ -59,18 +58,17 @@ body{
     display:block;
     height: 1.4em;
     font-size: 1.4em;
-
     overflow:hidden;
 }
 
-#barra-lateral ul li *{
+#barra-lateral ul li p{
     text-decoration: line-through;
     color: #181818;
 }
 
 #barra-lateral ul li a {
     color: #181818;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 #barra-lateral ul li.submenu ul li{
