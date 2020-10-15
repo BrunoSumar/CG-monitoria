@@ -3,6 +3,7 @@ class Triangulo{
         this.vertices = [p1,p2,p3];
         this.pontos=[];
         this.malha = null;
+        this.limites = [];
     };
 
     calculaPontos(){
@@ -13,6 +14,9 @@ class Triangulo{
         y = Math.round(y/(this.malha.tamanho))*this.malha.tamanho+this.malha.tamanho/2;
         for(var i=y;i<=my;i+=this.malha.tamanho){
             var ex = this.calculaIntervalo(i, x, mx);
+            this.limites.push(this.pontos.length);
+            this.limites.push([ex[0],i]);
+            this.limites.push([ex[1],i]);
             ex[0] = Math.round(ex[0]/(this.malha.tamanho))*this.malha.tamanho+this.malha.tamanho/2;
             for(var j=ex[0];j<=ex[1];j+=this.malha.tamanho){
                 this.pontos.push(this.malha.toMalha([j,i]));
@@ -66,12 +70,23 @@ class Triangulo{
         var x = Math.min(p1[0],p2[0],p3[0]), mx = Math.max(p1[0],p2[0],p3[0]); // menor x maior x
         var y = Math.min(p1[1],p2[1],p3[1]), my = Math.max(p1[1],p2[1],p3[1]); // menor y maior y
 
-        y = Math.round(y/(this.malha.tamanho))*this.malha.tamanho+this.malha.tamanho/2;
-        fill('magenta');
-        noStroke();
-        for(var i=0; i<this.pontos.length;i++){
-            let temp = this.malha.toCanvas(this.pontos[i])
-            square(temp[0],temp[1], this.malha.tamanho);
+        if(status>3){
+            if(status<=97){
+                var j;
+                for(j=0;j<this.limites.length; j+=3){
+                    if(this.pontos.length*(status-3)/97<this.limites[j])
+                        break;
+                }
+                line(this.limimites[j+1][0],);
+
+            }
+            y = Math.round(y/(this.malha.tamanho))*this.malha.tamanho+this.malha.tamanho/2;
+            fill('magenta');
+            noStroke();
+            for(var i=0; i<this.pontos.length*(status-3)/97;i++){
+                let temp = this.malha.toCanvas(this.pontos[i])
+                square(temp[0],temp[1], this.malha.tamanho);
+            }
         }
         return 1;
     }
