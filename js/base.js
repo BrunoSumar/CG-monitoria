@@ -12,6 +12,17 @@ class Vect{
   }
 }
 
+class Utils{
+    static distancia(p1,p2){
+        if(p1.length!=p2.length) return undefined;
+        var result=0;
+        for(var i in p1){
+            result+=(p1[i]-p2[i])*(p1[i]-p2[i]);
+        }
+        return Math.sqrt(result);
+    };
+}
+
 class Malha{
     constructor(t){
         this.tamanho = t;  // tamanho de cadacelula da malha
