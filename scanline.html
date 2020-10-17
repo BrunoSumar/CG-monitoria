@@ -48,13 +48,29 @@
                 <!-- separar conteudo em .blocos -->
                 <div class="bloco">
                     <h2>Rasterização de tirnagulos - Algoritmo scanline</h2>
-                    <p> .<br>
-                    O algoritmo funciona da seguinte maneira:
+                     <p> O algoritmo de rasterização de triangulo por scanline é um algoritmo eficiente que determina que pixels fazem parte de um triangulo, percorrendo apenas esses pixels e apenas uma vez por pixel.<br>
+                         O algoritmo funciona da seguinte maneira:A partir do ponto mais alto (com maior Y) analisamos todas as linhas do triangulo. Encotramos os pontos mais a esquerda e mais a direita desta linha que fazem parte do triangulo, adicionamos todos os pontos entre eles a uma lista, e seguimos para a proxima linha (se houver). Quando não houver mais linha a ser analisada a lista de pontos estará completa.
                         Abaixo você pode conferir um pseudo-código desse algoritmo e um exemplo interativo de sua execução.</p>
 
-                    <div class="codigo">
+                     <div class="codigo">
+                         scanline(p1,p2,p3)<br>
+                         {<br>
+                         var x = Math.min(p1[0],p2[0],p3[0]), mx = Math.max(p1[0],p2[0],p3[0]); // menor x maior x<br>
+                         var y = Math.min(p1[1],p2[1],p3[1]), my = Math.max(p1[1],p2[1],p3[1]); // menor y maior y<br>
+                         var listaPontos = [];<br>
+                         for(var j=y;j<=my;j++)<br>
+                        {<br>
+                            var intervalo = calculaIntervalo(j, x, mx); //ponto mais a esquerda e mais a direita da linha<br>
+                            for(var i=intervalo[0];i<=intervalo[1];i++)<br>
+                            {<br>
+                                listaPontos.push([i,j]);<br>
+                            }<br>
+                        }<br>
+                        };<br>
 
                     </div>
+                    <p>Clique nos vétices para alterar seus valores.</p>
+
                     <!-- Canvas -->
                     <div id="scanline" class="canvasHolder wide tall">   </div>
                     <!-- output do canvas -->

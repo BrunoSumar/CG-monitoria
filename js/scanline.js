@@ -9,22 +9,15 @@ class Triangulo{
         var p1 = this.vertices[0], p2 = this.vertices[1], p3 = this.vertices[2];
         var x = Math.min(p1[0],p2[0],p3[0]), mx = Math.max(p1[0],p2[0],p3[0]); // menor x maior x
         var y = Math.min(p1[1],p2[1],p3[1]), my = Math.max(p1[1],p2[1],p3[1]); // menor y maior y
-        if(p1[0]==x) {
-            this.vertices[0]=p2;
-            this.vertices[1]=p1;
-        }else if(p3[0]==x) {
-            this.vertices[2]=p2;
-            this.vertices[1]=p3;
-        }
         this.limites = [];
-        y = Math.round(y/(this.malha.tamanho))*this.malha.tamanho+this.malha.tamanho/2;
+        y = Math.ceil(y/(this.malha.tamanho/2))*this.malha.tamanho/2;
+        if(y%this.malha.tamanho == 0) y+=this.malha.tamanho/2;
         for(var i=y;i<=my;i+=this.malha.tamanho){
             var ex = this.calculaIntervalo(i, x, mx);
             this.limites.push(i);
             this.limites.push(ex[0]);
             this.limites.push(ex[1]);
         }
-        this.vertices = [p1,p2,p3];
     };
 
     calculaIntervalo(y, x, mx){
@@ -36,7 +29,8 @@ class Triangulo{
                 case 0:
                     break;
                 case 1:
-                    if(temp[0]>=x && temp[0]<=mx){
+                var le = Math.min(this.vertices[i][0],this.vertices[(i+1)%3][0]), lr = Math.max(this.vertices[i][0],this.vertices[(i+1)%3][0]);
+                    if(temp[0]>=le && temp[0]<=lr){
                         out.push(temp[0]);
                     }
                     break;
@@ -78,14 +72,14 @@ class Triangulo{
             for( i=0;i<this.limites.length*(status-3)/97;i+=3){
                 let tx1=Math.round(this.limites[i+1]/this.malha.tamanho)*this.malha.tamanho;
                 let tx2=Math.round(this.limites[i+2]/this.malha.tamanho)*this.malha.tamanho;
-                let ty=Math.round(this.limites[i]/this.malha.tamanho)*this.malha.tamanho;
+                let ty=Math.floor(this.limites[i]/this.malha.tamanho)*this.malha.tamanho;
                 noStroke();
                 fill('magenta');
                 rect(tx1,ty,tx2-tx1,this.malha.tamanho);
             }
             if(i>0){i-=3;}
             if(status<=97){
-                let ty=Math.round(this.limites[i]/this.malha.tamanho)*this.malha.tamanho+this.malha.tamanho/2;
+                let ty=Math.floor(this.limites[i]/this.malha.tamanho)*this.malha.tamanho+this.malha.tamanho/2;
                 stroke('red');
                 strokeWeight(1);
                 line(x,ty,mx,ty);
@@ -135,7 +129,7 @@ function setup() {
     pa.checked= autoPlay;
 
     m = new Malha(parseFloat(sm.value));
-    t = new Triangulo([500,190],[width/4,120],[3*width/4,300]);
+    t = new Triangulo([width/5,4*height/5],[width/4,height/6],[3*width/4,300]);
     t.malha = m;
     t.calculaPontos();
 
@@ -156,8 +150,11 @@ function draw() {
 
             }
             stat += velocidade;
-            if(stat<=0 || stat>=100){
-                stat = Math.round(stat);
+            if(stat<=0){
+                stat = Math.max(0,stat);
+                velocidade*=-1;
+            }else if(stat>=100){
+                stat = Math.min(100,stat);
                 velocidade*=-1;
             };
             sp.value = stat;
@@ -172,28 +169,31 @@ function draw() {
             t.calculaPontos();
         }
 
-        if(vS!=0){
-            t.vertices[vS-1][0]+= mPos1[0]-mPos2[0];
-            t.vertices[vS-1][1]+= mPos1[1]-mPos2[1];
-            console.log(vS+' 1: '+t.vertices);
-            //console.log('2: '+t.vertices);
-            t.calculaPontos();
-            //console.log(t.vertices[vS-1]);
-        }
-
 
         var temp = t.draw(parseFloat(sp.value)); //desenha o triangulo
 
+        stroke(205);
+        strokeWeight(1);
+        line(t.vertices[0][0], t.vertices[0][1],t.vertices[1][0], t.vertices[1][1]);
+        line(t.vertices[0][0], t.vertices[0][1],t.vertices[2][0], t.vertices[2][1]);
+        line(t.vertices[2][0], t.vertices[2][1],t.vertices[1][0], t.vertices[1][1]);
 
         if(cm.checked) //Desenha malha
             m.draw();
-        // console.log(t.pontos.length);
-        //infos da reta no canvas
-        // let saida = "P1=("+r.extremos[0]+"), P2=("+r.extremos[1]+")";
-        // saida += "<br> Dx: "+r.dx+", Dy: "+r.dy;
-        // if(temp!=undefined)
-        //     saida += ", Último ponto: ("+temp[0]+","+temp[1]+")";
-        // out.innerHTML = saida;
+
+        if(vS!=0){
+            stroke('orange');
+            strokeWeight(6);
+            point(t.vertices[vS-1][0],t.vertices[vS-1][1]);
+            t.vertices[vS-1][0]+= mPos1[0]-mPos2[0];
+            t.vertices[vS-1][1]+= mPos1[1]-mPos2[1];
+            t.calculaPontos();
+        }
+
+
+
+         let saida = "P1=("+t.vertices[0]+"), P2=("+t.vertices[1]+"), P2=("+t.vertices[2]+")";
+        out.innerHTML = saida;
 
     }
 }
