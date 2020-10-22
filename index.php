@@ -10,28 +10,9 @@
     </head>
     <body>
         <!-- Lateral -->
-        <div id="barra-lateral">
-            <div class="titulo">
-                <h1>CG</h1>
-                <h3>Monitoria</h3>
-            </div>
-            <hr>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li class="submenu rasterizacao">
-                    <a class="path" href="./rasterizacao.html">Rasterização</a>
-                    <ul>
-                        <li><p>Retas</p></li>
-                        <li><p>Circunferências</p></li>
-                        <li><p>Triangulos</p></li>
-                        <li><p>Curvas</p></li>
-                    </ul>
-                </li>
-                <li><p>Recorte</p></li>
-                <li><p>Transformações</p></li>
-                <li><p>Opengl</p></li>
-            </ul>
-        </div>
+        <?php
+            echo file_get_contents("./sidebar.html", false, NULL, 0, 70000) ;
+        ?>
         <!-- Centro -->
         <div id="principal">
             <div id="conteudo">

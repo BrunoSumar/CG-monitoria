@@ -11,29 +11,9 @@
     <body>
 
         <!-- Lateral -->
-        <div id="barra-lateral">
-            <div class="titulo">
-                <h1>CG</h1>
-                <h3>Monitoria</h3>
-            </div>
-            <hr>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li class="submenu rasterizacao">
-                    <a class="path" href="./rasterizacao.html">Rasterização</a>
-                    <ul>
-                        <li><p>Retas</p></li>
-                        <li><p>Circunferências</p></li>
-                        <li><p>Triangulos</p></li>
-                        <li><p>Curvas</p></li>
-                    </ul>
-                </li>
-                <li><p>Recorte</p></li>
-                <li><p>Transformações</p></li>
-                <li><p>Opengl</p></li>
-            </ul>
-        </div>
-
+         <?php
+            echo file_get_contents("./sidebar.html", false, NULL, 0, 70000) ;
+         ?>
         <!-- Centro -->
         <div id="principal">
             <div id="conteudo">
@@ -42,14 +22,14 @@
                 <div class="breadcrumbs">
                     <a class="path" href="./index.html">Home</a> /
                     <a class="path" href="./rasterizacao.html">Rasterização</a> /
-                    <p class="path">DDA</p>
+                    <p class="path">Bresenham</p>
                 </div>
                 <hr>
                 <!-- separar conteudo em .blocos -->
                 <div class="bloco">
                     <h2>Rasterização de retas - Algoritmo DDA</h2>
-                    <p> O Digital Differential Analyser (DDA) é um algoritmo simples que nos permite escolher quais pixels da tela preencher (rasterizar) para representear uma reta graficamente.<br>
-                    O algoritmo funciona da seguinte maneira: uma vez escolhidos os dois extremos do segmento de reta, determinamos em qual eixo os ponstos estão mais distantes. Calculamos a variação das coordenadas dos pontos da reta e percorremos esse eixo adicionando as variações ao ponto inicial até que o segmento de reta esteja totalmente preenchido.
+                    <p> .<br>
+                    O algoritmo funciona da seguinte maneira:
                         Abaixo você pode conferir um pseudo-código desse algoritmo e um exemplo interativo de sua execução.</p>
 
                     <div class="codigo">

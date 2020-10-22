@@ -11,35 +11,15 @@
     <body>
 
         <!-- Lateral -->
-        <div id="barra-lateral">
-            <div class="titulo">
-                <h1>CG</h1>
-                <h3>Monitoria</h3>
-            </div>
-            <hr>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li class="submenu rasterizacao">
-                    <a href="./rasterizacao.html">Rasterização</a>
-                    <ul>
-                        <li><a href="#retas">Retas</a></li>
-                        <li><p>Circunferências</p></li>
-                        <li><p>Triangulos</p></li>
-                        <li><p>Curvas</p></li>
-                    </ul>
-                </li>
-                <li><p>Recorte</p></li>
-                <li><p>Transformações</p></li>
-                <li><p>Opengl</p></li>
-            </ul>
-        </div>
-
+         <?php
+            echo file_get_contents("./sidebar.html", false, NULL, 0, 70000) ;
+         ?>
         <!-- Centro -->
         <div id="principal">
             <div id="conteudo">
                 <!-- separar conteudo em .blocos -->
                 <div class="breadcrumbs">
-                    <a class="path" href="./index.html">Home</a> /
+                    <a class="path" href="./index.php">Home</a> /
                     <p class="path">Rasterização</p>
                 </div>
                 <hr>
@@ -50,7 +30,10 @@
                     <h4>Algoritmos:</h4>
                     <ul>
                         <h5 id="retas">Retas:</h5>
-                        <li><a href="dda.html">Reta (DDA)</a></li>
+                        <li><a href="dda.php">Reta (DDA)</a></li>
+                        <h5 id="triangulos">Triângulos:</h5>
+                        <li><a href="scanline.php">Scanline</a></li>
+
                     </ul>
                 </div>
             </div>
