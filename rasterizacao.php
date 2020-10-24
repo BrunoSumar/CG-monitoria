@@ -30,7 +30,8 @@
                     <h4>Algoritmos:</h4>
                     <ul>
                         <h5 id="retas">Retas:</h5>
-                        <li><a href="dda.php">Reta (DDA)</a></li>
+                        <li><a href="dda.php">DDA</a></li>
+                        <li><a href="bresenham.php">Bresenham</a></li>
                         <h5 id="triangulos">Triângulos:</h5>
                         <li><a href="scanline.php">Scanline</a></li>
 

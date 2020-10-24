@@ -27,39 +27,36 @@
                 <hr>
                 <!-- separar conteudo em .blocos -->
                 <div class="bloco">
-                    <h2>Rasterização de retas - Algoritmo DDA</h2>
-                    <p> .<br>
-                    O algoritmo funciona da seguinte maneira:
+                    <h2>Rasterização de retas - Algoritmo de Bresenham</h2>
+                    <p>O algoritmo de rasterização de retas de Bresenham, assim como o <spam><a src ="dda.php">DDA</a></spam>, que a partir de duas posições no espaço gera um conjunto discreto de pontos entre essas posições (basicamente nos diz quais pixels pertecem a um segmento de reta). Esse algoritmo busca ser mais otimizado ao evitar operações com números de ponto flutuante e suas aroximações.<br>
                         Abaixo você pode conferir um pseudo-código desse algoritmo e um exemplo interativo de sua execução.</p>
 
                     <div class="codigo">
-                        DDA()<br>
+                        Bresenham(p1, p2)  //Algoritmo de Bresenham para primeiro octante<br>
                         {<br>
-                            //  Pontos extremos da reta<br>
-                            var ponto1 = {x:x1, y:y1}, ponto2 = {x:x2, y:y2};<br>
-                            //  Distância dos extremos nos eixos x e Y<br>
-                            var dx = ponto2.x - ponto1.x, dy = ponto2.y - ponto1.y;<br>
-                            //  Escolha da maior distância<br>
-                            var delta = Max(dx, dy);<br>
-                            //  Calculo da variaçao de x e y<br>
-                            dx /= delta;<br>
-                            dy /= delta;<br>
-                            //  Loop percorrendo a maior distância<br>
-                            var x = ponto1.x, y = ponto1.y;<br>
-                            var listaDePontos = [];<br>
-                            for(var i=0;i<=delta;i++){<br>
-                                listaDePontos.push([x,y]);<br>
-                                //  incremento da variação<br>
-                                x = x + dx;<br>
-                                y = y + dy;<br>
-                            }<br>
+                            let dx = p2.x - p1; //variação em X<br>
+                            let dy = p2.y - p1.y; //Varização em Y<br>
+                        let D = 2*dy + dx;<br>
+                        <br>
+                        let y = p1.y;<br>
+                        let listaDePontos = [];<br>
+                        for(let x=p1.x;x!=p2.x;x++){<br>
+                        listaDePontos.push([x,y]);<br>
+                        if(D>0){<br>
+                            D -= 2*dx;<br>
+                            y++;<br>
+                        }<br>
+                        D += 2*dy;
+                        }<br>
                             return listaDePontos;<br>
                         };<br>
                     </div>
+                    <br>
+                    <p> Clique e arraste os pontos para mudar sua posição</p>
                     <!-- Canvas -->
-                    <div id="dda" class="canvasHolder wide tall">   </div>
+                    <div id="bresenham" class="canvasHolder wide tall">   </div>
                     <!-- output do canvas -->
-                    <div class="dadosCanvas" id="saidaDDA" >
+                    <div class="dadosCanvas" id="saidaBresenham" >
                     </div>
                     <!-- Controles do canvas -->
                     <div class="controles">
@@ -87,7 +84,7 @@
         </div>
         <!-- javascript -->
         <script src="./js/base.js"></script>
-        <script src="./js/retaDDA.js"></script>
+        <script src="./js/bresenham.js"></script>
 
 
     </body>

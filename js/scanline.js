@@ -1,3 +1,4 @@
+
 class Triangulo{
     constructor(p1, p2, p3) {
         this.vertices = [p1,p2,p3];
