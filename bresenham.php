@@ -27,9 +27,19 @@
                 <hr>
                 <!-- separar conteudo em .blocos -->
                 <div class="bloco">
-                    <h2>Rasterização de retas - Algoritmo de Bresenham</h2>
-                    <p>O algoritmo de rasterização de retas de Bresenham, assim como o <spam><a src ="dda.php">DDA</a></spam>, que a partir de duas posições no espaço gera um conjunto discreto de pontos entre essas posições (basicamente nos diz quais pixels pertecem a um segmento de reta). Esse algoritmo busca ser mais otimizado ao evitar operações com números de ponto flutuante e suas aroximações.<br>
-                        Abaixo você pode conferir um pseudo-código desse algoritmo e um exemplo interativo de sua execução.</p>
+                    <h2>Rasterização de retas - Algoritmo de Bresenham</h2><br>
+                    <p>O algoritmo de rasterização de retas de Bresenham, assim como o <spam><a src ="dda.php">DDA</a></spam>, a partir de duas posições no espaço gera um conjunto discreto de pontos ligando essas posições (basicamente nos diz quais pixels pertecem a um segmento de reta). Esse algoritmo busca ser mais otimizado ao evitar operações com números de ponto flutuante e suas aproximações.<br></p>
+                    <p>O algoritmo se baseia numa derivação da equação de reta que passa pelos pontos escolhidos, que chamaremos de  P1 e P2. considerando f(x)=y=mx+n como sendo a equação que define a reta, em que m=variação de y/variação de x e n=f(0), podemos transforma la na função composta f(x,y)=Ax+By+C, em que A=dy, B=-dx e C=n*dx, dessa forma para cada pixel temos uma valor associado que para pontos abaixo da reta é positivo, acima da reta negativo e exatamente sobre a reta igual a zero. </p>
+                    <div style="text-align:center;"><img src="img/bresenham2.png" alt="derivação função composta." height="300" style="margin:0 auto;"></div>
+                    <p>Com essa informação partindo de um ponto conhecido da reta podemos verificar o ponto médio dos próximos dois pixels a direita e descobrir qual deles está mais perto da reta.</p>
+                    <div style="text-align:center;"><<img src="img/bresenham1.png" alt="buscamos o valor da função para x+1 e y+0,5." height="400"></div>
+                    <p>A variação de f(x,y) para f(x+1,y+0.5) é de A+B/2.</p>
+                    <div style="text-align:center;"><<img src="img/bresenham3.png" alt="diferença entra funções." height="240"></div>
+                    <p>Sabendo isso podemos evitar calcular f(x+1,y+0.5) para cada ponto. Uma vez tomada a decisão avançamos para o ponto escolhido que podem ser [x+1,y] ou [x+1,y+1].</p>
+                    <div style="text-align:center;"><<img src="img/bresenham4.png" alt="diferença entra funções." height="150"></div>
+                    <p>Partindo do ponto P1, cujo f(P1.x,P1.y)=0, calculamos f(P1.x+1,P1.y+.5) por A+B/2 e atribuimos seu valor a uma variável D, tomamos a decisão de qual próximo ponto da reta e atualizamos D. Isso se repete qté chegarmos em P2.</p>
+                    <p>Os calculos antesriores são válidos apenas para segmentos de reta contidos no primeiro octante do plano cartesiano.
+                    <p>Abaixo você pode conferir um pseudo-código desse algoritmo e um exemplo interativo de sua execução.</p>
 
                     <div class="codigo">
                         Bresenham(p1, p2)  //Algoritmo de Bresenham para primeiro octante<br>

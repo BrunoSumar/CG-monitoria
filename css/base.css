@@ -184,6 +184,10 @@ li.rasterizacao:hover{
     color: black;
 }
 
+#conteudo img {
+    margin: 0 auto; !important
+}
+
 .path {
     font-weight: 500;
     display: inline;
