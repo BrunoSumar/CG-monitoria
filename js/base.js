@@ -132,3 +132,29 @@ class Reta{
 
     };
 }
+
+const multMat = (a,b) =>{
+    result = [];
+    for(let i in a){
+        result.push([]);
+        for(let j in b[0]){
+            let temp = 0;
+            for(k in a[i]){
+                temp += a[i][k]*b[k][j];
+            }
+            result[i].push(temp);
+        }
+    }
+    return result;
+}
+
+const transp = (m) => {
+    let result = [];
+    for(let i in m[0]){
+        result.push([]);
+        for(let j in m){
+            result[i].push(m[j][i]);
+        }
+    }
+    return result;
+}

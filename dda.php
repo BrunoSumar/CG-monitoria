@@ -20,8 +20,8 @@
 
                 <!-- Breadcrumbs -->
                 <div class="breadcrumbs">
-                    <a class="path" href="./index.html">Home</a> /
-                    <a class="path" href="./rasterizacao.html">Rasterização</a> /
+                    <a class="path" href="./index.php">Home</a> /
+                    <a class="path" href="./rasterizacao.php">Rasterização</a> /
                     <p class="path">DDA</p>
                 </div>
                 <hr>

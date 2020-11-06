@@ -16,7 +16,7 @@
 
 body{
     background-color: #e6e6e6;
-    background-image: linear-gradient(to right, #d0d0d0, #e6e6e6 55%);
+    /* background-image: linear-gradient(to right, #d0d0d0, #e6e6e6 55%); */
 }
 
 /*---------------------
@@ -108,6 +108,12 @@ li.rasterizacao:hover{
 }
 
 .bloco {
+    padding: 5% 1em 1% 1em;
+    text-align: justify;
+    overflow: auto;
+}
+
+.bloco-final {
     padding: 5% 1em 5% 1em;
     text-align: justify;
     overflow: auto;
@@ -175,12 +181,12 @@ li.rasterizacao:hover{
 }
 
 #conteudo a {
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
 }
 
 #conteudo a:hover {
-    text-decoration: underline;
+    font-weight: bold;
     color: black;
 }
 
@@ -191,6 +197,36 @@ li.rasterizacao:hover{
 .path {
     font-weight: 500;
     display: inline;
+}
+
+#conteudo table {
+    font-size: 1.6em;
+    border-collapse: collapse;
+}
+
+#conteudo input {
+    background: #f6f6f6;
+    border: 0;
+    border-bottom: 1px solid #181818;
+    width: 2em;
+    font-size: inherit;
+    text-align: center;
+}
+
+#conteudo td {
+    padding: 0 .2em;
+}
+
+#conteudo td.ml {
+    border-left: 2px solid #181818;
+}
+
+#conteudo td.mr {
+    border-right: 2px solid #181818;
+}
+
+#conteudo td.m {
+    text-align: center;
 }
 
 /* Configuraçao dos elementos que contem os canvas */

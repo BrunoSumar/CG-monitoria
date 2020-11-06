@@ -25,16 +25,14 @@
                 <hr>
                 <h2>Exemplos</h2>
                 <div class="bloco">
-                    <div id="canvas2" class="canvasHolder  right"></div>
-                    <h3>Exemplo dummy1!</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#">Veja mais</a>
+                    <img src="img/bresenham.png" class="right" width="40%" style="margin:0 1em 0 2em;">
+                    <h3><a href="bresenham.php">Algoritmo de rasterização de retas: Bresenham</a></h3>
+                    <p>O algoritmo de rasterização de retas de Bresenham, assim como o <spam><a src ="dda.php">DDA</a></spam>, a partir de duas posições no espaço gera um conjunto discreto de pontos ligando essas posições (basicamente nos diz...<a href="bresenham.php">Veja mais</a></p>
                 </div>
                 <div class="bloco">
-                    <div id="canvas3" class="canvasHolder left" ></div>
-                    <h3>Exemplo dummy2!</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laborsde et dolore magna aliqua.</p>
-                    <a href="#">Veja mais</a>
+                    <img src="img/scanline.png" class="left" width="49%" style="margin:0 1em 0 2em;">
+                    <a herf="scanline.php" ><h3>Alogritmo de rasterização de triangulos: Scanline</h3></a>
+                    <p> O algoritmo de rasterização de triangulo por scanline é um algoritmo eficiente que determina que pixels fazem parte de um triangulo, percorrendo esses pixels e apenas uma vez cada...<a href="scanline.php">Veja mais</a></p>
                 </div>
             </div>
         </div>

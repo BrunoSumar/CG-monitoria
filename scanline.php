@@ -20,16 +20,16 @@
 
                 <!-- Breadcrumbs -->
                 <div class="breadcrumbs">
-                    <a class="path" href="./index.html">Home</a> /
-                    <a class="path" href="./rasterizacao.html">Rasterização</a> /
+                    <a class="path" href="./index.php">Home</a> /
+                    <a class="path" href="./rasterizacao.php">Rasterização</a> /
                     <p class="path">Scanline</p>
                 </div>
                 <hr>
                 <!-- separar conteudo em .blocos -->
                 <div class="bloco">
                     <h2>Rasterização de tirnagulos - Algoritmo scanline</h2>
-                     <p> O algoritmo de rasterização de triangulo por scanline é um algoritmo eficiente que determina que pixels fazem parte de um triangulo, percorrendo apenas esses pixels e apenas uma vez por pixel.<br>
-                         O algoritmo funciona da seguinte maneira:A partir do ponto mais alto (com maior Y) analisamos todas as linhas do triangulo. Encotramos os pontos mais a esquerda e mais a direita desta linha que fazem parte do triangulo, adicionamos todos os pontos entre eles a uma lista, e seguimos para a proxima linha (se houver). Quando não houver mais linha a ser analisada a lista de pontos estará completa.
+                     <p> O algoritmo de rasterização de triangulo por scanline é um algoritmo eficiente que determina que pixels fazem parte de um triangulo, percorrendo esses pixels apenas uma vez cada.<br>
+                         O algoritmo funciona da seguinte maneira: A partir do ponto mais alto (com maior Y) analisamos todas as linhas do triangulo. Encotramos os pontos mais a esquerda e mais a direita desta linha que fazem parte do triangulo, adicionamos todos os pontos entre eles a uma lista, e seguimos para a proxima linha (se houver). Quando não houver mais linhas a serem analisadas o algoritmo chega ao fim.
                         Abaixo você pode conferir um pseudo-código desse algoritmo e um exemplo interativo de sua execução.</p>
 
                      <div class="codigo">
