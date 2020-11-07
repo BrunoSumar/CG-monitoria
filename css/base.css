@@ -204,11 +204,12 @@ li.rasterizacao:hover{
     border-collapse: collapse;
 }
 
-#conteudo input {
+#conteudo table input , #conteudo .inText{
     background: #f6f6f6;
     border: 0;
     border-bottom: 1px solid #181818;
     width: 2em;
+
     font-size: inherit;
     text-align: center;
 }

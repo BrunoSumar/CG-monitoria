@@ -77,10 +77,10 @@
                         <div id="canvasRot" class="right canvasHolder"></div>
                         <p style="padding-top: 2em;">Para cada ponto P da figura ao lado realizamos a operação abaixo (você pode alterar os valores da trasnformação).</p>
                        <table>
-                            <p style="font-size:1.4em;">Rotação em <input id="rot" type="text" value="60"> grau(s).</p>
+                            <p style="font-size:1.4em;">Rotação em <input id="rot" type="text" value="60" class="inText"> grau(s).</p>
                             <tr>
                                 <td> P' = M*P = </td>
-                                <td class="m ml" id="r11">212</td>
+                                <td class="m ml" id="r11"></td>
                                 <td class="m mr" id="r12"></td>
                                 <td> * </td>
                                 <td class="m ml mr"> P.x </td>

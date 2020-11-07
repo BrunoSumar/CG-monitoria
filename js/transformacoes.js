@@ -104,7 +104,7 @@ const rot = (c) => {
     c.draw = function(){
         let figT =[];
         let m = null, t = getInfo('rot','rot');
-        setInfo(['r11','r12','r21','r22'], ['cos('+t[0]+'),','sen('+t[0]+')','-sen('+t[0]+'),','cos('+t[0]+')']);
+        setInfo(['r11','r12','r21','r22'], ['cos('+t[0]+'°),','sen('+t[0]+'°)','-sen('+t[0]+'°),','cos('+t[0]+'°)']);
         c.background('#f6f6f6');
         m = multMat(escala(10,10),translacao(c.width/22-3, c.height/22-3));
         figT = transformAll(fig, m);
