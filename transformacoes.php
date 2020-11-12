@@ -48,7 +48,7 @@
                 </div>
                 <div class="bloco">
                     <h2>Escala</h2>
-                    <p>A transformação de escala altera as proporções do objeto transformado. Ela pode ser feita atravéz da multiplicação do valor das coordenadas de um ponto por um fator de escala. Podemos representa-la pela multiplicação do ponto pela matriz de escala a seguir.</p>
+                    <p>A transformação de escala altera as proporções do objeto transformado. Ela pode ser feita através da multiplicação do valor das coordenadas de um ponto por um fator de escala. Podemos representa-la pela multiplicação do ponto pela matriz de escala a seguir.</p>
                     <div>
                         <div id="canvasEsc" class="right canvasHolder"></div>
                         <p style="padding-top: 2em;">Para cada ponto P da figura ao lado realizamos a sehuinte operação (você pode alterar os valores da trasnformação):</p>

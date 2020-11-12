@@ -1,0 +1,31 @@
+#matrixHolder {
+    background: #e6e6e6;
+    width: 40%;
+    height: 30vh;
+    display: inline-block;
+    overflow-y: scroll;
+    /* float: right; */
+    text-align: center;
+}
+
+#matrixHolder div {
+    background: #f6f6f6;
+    width: 95%;
+    margin: .5em auto;
+}
+
+#matrixHolder button {
+    width: 100%;
+    border: 0;
+    background: #181818;
+    color: #f6f6f6;
+}
+
+#matrixHolder table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#matrixHolder button:hover {
+    cursor: pointer;
+}
