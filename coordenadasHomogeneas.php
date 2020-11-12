@@ -42,7 +42,7 @@
                                 <td>P' = M*P = </td>
                                 <td class="m ml">1 ,</td>
                                 <td> 0 ,</td>
-                                <td class="m mr"><input id="transX" type="text" value="25">,</td>
+                                <td class="m mr"><input id="transX" type="text" value="25"></td>
                                 <td> * </td>
                                 <td class="m ml mr"> P.x </td>
                             </tr>
@@ -50,7 +50,7 @@
                                 <td></td>
                                 <td class="m ml"> 0 ,</td>
                                 <td>1 ,</td>
-                                <td class="m mr"><input id="transY" type="text" value="20">,</td>
+                                <td class="m mr"><input id="transY" type="text" value="20"></td>
                                 <td> </td>
                                 <td class="m ml mr"> P.y </td>
                             </tr>
@@ -109,7 +109,7 @@
                                 <td> P' = </td>
                                 <td class="m ml" id="r11"></td>
                                 <td class="m" id="r12"></td>
-                                <td class="m mr">0 ,</td>
+                                <td class="m mr">0</td>
                                 <td> * </td>
                                 <td class="m ml mr"> P.x </td>
                             </tr>
@@ -117,7 +117,7 @@
                                 <td></td>
                                 <td class="m ml" id="r21"></td>
                                 <td class="m" id="r22"></td>
-                                <td class="m mr">0 ,</td>
+                                <td class="m mr">0</td>
                                 <td> </td>
                                 <td class="m ml mr"> P.y </td>
                             </tr>
@@ -125,7 +125,7 @@
                                 <td></td>
                                 <td class="m ml"> 0 ,</td>
                                 <td class="m"> 0 ,</td>
-                                <td class="m mr"> 1 </td>
+                                <td class="m mr"> 1</td>
                                 <td> </td>
                                 <td class="m ml mr">1</td>
                             </tr>

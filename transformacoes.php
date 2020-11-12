@@ -28,11 +28,11 @@
                     <h2>Transformações</h2>
 
                     <p>Transformções são operações que quando aplicadas a um objeto alteram sua forma, tamanho e posição. Isso nos permite representar um mesmo objeto de diferentes formas.</p>
-                    <p>As principais transformações são as de translação, escala, rotação, reflexão e Cisalhamento. Logo abaixo há uma descrição sucinta do que cada uma delas faz e como realiza-las porém é importante saber que existe uma forma mais inteligente de se fazer transformações usando <a href="#">coordenadas homogêneas(em breve)</a>.</p>
+                    <p>As principais transformações são as de translação, escala, rotação, reflexão e Cisalhamento. Logo abaixo há uma descrição sucinta do que cada uma delas faz e como realiza-las porém é importante saber que existe uma forma mais inteligente de se fazer transformações usando <a href="coordenadasHomogeneas.php">coordenadas homogêneas</a>.</p>
                 </div>
                 <div class="bloco">
                     <h2>Translação</h2>
-                    <p>A transformação de translação como o nome indica causará um deslocamento. Ela pode ser feita ao se realizar uma soma vetorial do ponto a ser alterado com um vetor deslocamento, diferente das outras transformações que exigem uma multiplicação de matrizes. Essa diferença gera problomas que podem ser contornados ao se utilizar <a>coordenadas homogêneas</a>.</p>
+                    <p>A transformação de translação como o nome indica causará um deslocamento. Ela pode ser feita ao se realizar uma soma vetorial do ponto a ser alterado com um vetor deslocamento, diferente das outras transformações que exigem uma multiplicação de matrizes. Essa diferença gera problomas que podem ser contornados ao se utilizar <a href="coordenadasHomogeneas.php">coordenadas homogêneas</a>.</p>
                     <div>
                         <div id="canvasTrans" class="right canvasHolder"></div>
                         <p style="padding-top: 2em;">Para cada ponto P da figura ao lado realizamos a seguinte operação (você pode alterar os valores da trasnformação):</p>
