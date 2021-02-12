@@ -1,0 +1,19 @@
+.origemLinhas {
+    display: inline-block;
+    line-height: 1.5em;
+    width: calc(99% - 3ch - 1.2em);
+}
+
+.linhas{
+    display: inline-block;
+    width: 3ch;
+    float: left;
+    padding: .3em .1em;
+    line-height: 1.5em;
+    color: #a1a1a1;
+    font-size: 1.7em;
+    font-family: monospace;
+    border-right: solid #a1a1a1 1.5px;
+    text-align: center;
+    white-space: pre;
+}

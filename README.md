@@ -14,10 +14,8 @@ Temas:
         - Bezier
         - De Casteljau
 - Algoritmos de recorte em triangulos
-    - 2D
-    - 3D
 - Transformações
-    - Tranlação
+    - Translação
     - Escala
     - Rotação
         - Angulos de Euler

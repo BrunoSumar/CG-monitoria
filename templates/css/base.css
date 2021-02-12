@@ -1,0 +1,333 @@
+/*Arquivo css base*/
+
+
+/* --------------
+        Geral
+---------------*/
+
+/*fundo0 #e6e6e6, fundo1 #f6f6f6, fonte #181818*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    style: none;
+}
+
+body{
+    background-color: #e6e6e6;
+    /* background-image: linear-gradient(to right, #d0d0d0, #e6e6e6 55%); */
+}
+
+/*---------------------
+    Barra na Lateral
+---------------------*/
+
+#barra-lateral{
+    color: #181818;
+    height: 100%;
+    position: fixed;
+    padding: 1.5em 1em 0 1em;
+    background: #f6f6f6;
+}
+
+.titulo *{
+    font-size:4em;
+    font-weight: bolder;
+    line-height: 90%;
+}
+
+.titulo h3{
+    font-size:2.3em;
+}
+
+#barra-lateral hr{
+    border: 0;
+    border-top: solid #181818 5px;
+    margin: 0.4em auto 3em auto;
+}
+
+#barra-lateral ul{
+    list-style: none;
+}
+
+#barra-lateral ul li{
+    padding:0.3em 0 0 0.3em ;
+    line-height: 1.5em;
+    margin-bottom: 0.4em;
+    display:block;
+    height: 1.4em;
+    font-size: 1.4em;
+    overflow:hidden;
+}
+
+#barra-lateral ul li p{
+    text-decoration: line-through;
+    color: #181818;
+}
+
+#barra-lateral ul li a {
+    color: #181818;
+    text-decoration: none !important;
+}
+
+#barra-lateral ul li.submenu ul li{
+    border-left: solid 2.6px #181818;
+    margin: 0;
+    margin-left: 0.7em;
+    font-size: 0.8em;
+}
+
+/*animações do menu */
+@keyframes submenu-ras {
+  from {height: 1.2em; margin-bottom: 1em;}
+  to {height: 7.7em; margin-bottom: 0em;}
+}
+li.rasterizacao:hover{
+    animation-name: submenu-ras;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes submenu-trans {
+  from {height: 1.2em; margin-bottom: 1em;}
+  to {height: 3.2em; margin-bottom: 0em;}
+}
+li.transformacao:hover{
+    animation-name: submenu-trans;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+/*---------------------
+        Centro
+---------------------*/
+
+#principal{
+    position: relative;
+    left: 12.3em;
+    padding: 0.8em 0 .8em 0;
+    width: calc(100% - 12.4em);
+}
+
+#conteudo{
+    width: 95%;
+    margin: 0 auto;
+    background: #f6f6f6;
+
+}
+
+.bloco {
+    padding: 5% 1em 1% 1em;
+    text-align: justify;
+    overflow: auto;
+}
+
+.bloco-final {
+    padding: 5% 1em 5% 1em;
+    text-align: justify;
+    overflow: auto;
+}
+
+.bloco h3{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+.breadcrumbs {
+    padding: .5em 1em;
+    text-align: left;
+}
+
+#conteudo hr{
+    border: 0;
+    border-top: solid #e6e6e6 5px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#conteudo h2{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+#conteudo h4 {
+    margin-top: 1.5em;
+}
+
+#conteudo p {
+    margin: 1em 0;
+}
+
+#conteudo .codigo {
+    margin: 0.6em;
+    background: #efefef;
+}
+
+#conteudo .controles{
+    text-align: left;
+    width: 100%;
+    padding: 1%;
+    display: inline-block;
+}
+
+#conteudo .dadosCanvas {
+    background: #181818;
+    margin: 0.6em 0;
+    height: 100%;
+    color:  #f6f6f6;
+    padding: .5em;
+}
+
+#conteudo ul {
+    list-style: square;
+}
+
+#conteudo li {
+    text-decoration: none;
+    margin-left: 1.5em;
+}
+
+#conteudo a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+#conteudo a:hover {
+    font-weight: bold;
+    color: black;
+}
+
+#conteudo img {
+    margin: 0 auto; !important
+}
+
+.path {
+    font-weight: 500;
+    display: inline;
+}
+
+#conteudo table {
+    font-size: 1.6em;
+    border-collapse: collapse;
+}
+
+#conteudo table input , #conteudo .inText{
+    background: #f6f6f6;
+    border: 0;
+    border-bottom: 1px solid #181818;
+    width: 2em;
+
+    font-size: inherit;
+    text-align: center;
+}
+
+#conteudo td {
+    padding: 0 .2em;
+}
+
+#conteudo td.ml {
+    border-left: 2px solid #181818;
+}
+
+#conteudo td.mr {
+    border-right: 2px solid #181818;
+}
+
+#conteudo td.m {
+    text-align: center;
+}
+
+/* Configuraçao dos elementos que contem os canvas */
+
+.canvasHolder { /* Base parar crira canvas */
+    width: 50%;
+    height: 30vh;
+    display: block;
+    background-color: #e6e6e6;
+}
+
+.left { /* Posiciona canvas a esquerda */
+    float: left;
+    margin-right: 2em;
+    margin-left: 0;
+}
+
+.right { /* Posiciona canvas a direita */
+    float: right;
+    margin-right: 0;
+    margin-left: 2em;
+}
+
+.wide{ /* Largura máxima do canvas */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tall { /* Dobra altura do canvas */
+    height: 70vh;
+}
+
+/* Inputs */
+
+.sliderHolder {
+    display: inline-block;
+    width: 70%;
+    padding: 0;
+    margin: 0;
+}
+
+.sliderTitulo {
+    font-weight: bold;
+    display: inline-block;
+    width: 28%;
+    margin: 0;
+}
+
+.slider {
+    display: inline-block;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #e0e0e0;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 7px;
+  height: 18px;
+  border: 0;
+  border-radius: 0;
+  background: #181818;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 7px;
+  height: 18px;
+  border: 0;
+  border-radius: 0;
+  background: #181818;
+  cursor: pointer;
+}
+
+.checkTitulo {
+    display: inline-block;
+}
+
+.checkHolder {
+    display: inline-block;
+    margin: 0 2.2em 0 0.2em;
+}

@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Teste openGL</title>
+    <link rel="stylesheet" href="css/opengl.css">
+    <link rel="stylesheet" href="css/linhas.css">
+  </head>
+  <body onload="initGL(); createCodLines(); showTab('tabM',null);">
+
+    <!-- Espaço de input (lado esquerdo) -->
+    <div class="container in">
+      <div class="navbar">
+        <button onclick="showTab('tabM',this)" class="atual">Main</button>
+        <button onclick="showTab('tabV',this)">Vertex</button>
+        <button onclick="showTab('tabF',this)">Fragment</button>
+        <button class="run" onclick="renderCanvas()">
+            <div class="play"></div>
+        </button>
+      </div>
+
+      <div style="display:block" class="tab tabM">
+        <pre class="main origemLinhas"></pre>
+      </div>
+      <div class="tab tabV">
+        <pre class="vertex origemLinhas" ></pre>
+      </div>
+      <div class="tab tabF">
+        <pre class="frag origemLinhas" ></pre>
+      </div>
+
+    </div>
+
+    <!-- Espaço imagem de saida (lado direito) -->
+    <div class="container out">
+      <canvas id="glCanvas">a</canvas>
+    </div>
+
+    <script src="./js/opengl.js"></script>
+    <script src="./js/opengl00.js"></script>
+    <script src="./js/linhas.js"></script>
+
+
+  </body>
+</html>

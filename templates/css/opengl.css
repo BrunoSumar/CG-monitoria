@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    min-width: 1200px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+}
+
+body::after{
+    content: "";
+    clear: both;
+}
+
+.container {
+    width: calc(50% - 4em);
+    height: calc(100% - 4em);
+    float: left;
+    padding: 2em;
+}
+
+.in {
+    background: #f6f6f6;
+}
+
+div.out {
+    background: linear-gradient(to right,#ddd 5%,#f5f5f5 65%);
+    width: 50% !important;
+    height: 100% !important;
+    padding: 0;
+    display: inline-block;
+    height: 100vh;
+}
+
+.in button {
+    font-weight: 600;
+    padding: 1em;
+    line-height: .5em;
+    background: #f6f6f6;
+    height: 4ch;
+}
+
+.in button:hover {
+    color: #f6f6f6;
+    background: #888;
+}
+
+.in pre {
+    background: #f6f6f6;
+    padding: .3em;
+    font-size: 1.7em;
+    font-family: monospace;
+    color: #2a2a2a;
+}
+
+.in .tab {
+    border: 2.2px solid #b6b6b6;
+    overflow: auto;
+    height: 90%;
+}
+
+button.atual {
+    color: #f6f6f6 ;
+    background: #b6b6b6 ;
+}
+
+button.run {
+    float: right;
+    background: #888;
+    color: #f6f6f6;
+    line-height: .1em;
+}
+
+button.run:hover {
+    background: #222;
+}
+
+.out canvas{
+    width: 100%;
+    height: 100%;
+    image-rendering: crisp-edges;
+    display: block;
+}
+
+div.play {
+    display: block;
+    width:0;
+    height: 0;
+    border-top: solid transparent .8ch;
+    border-bottom: solid transparent .8ch;
+    border-left: #f6f6f6 solid 1.6ch;
+}
