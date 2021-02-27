@@ -34,7 +34,8 @@
                         <li><a href="bresenham.php">Bresenham</a></li>
                         <h5 id="triangulos">Triângulos:</h5>
                         <li><a href="scanline.php">Scanline</a></li>
-
+                        <h5 id="curvas">Curvas:</h5>
+                        <li><a href="bezier.php">Curva de Bézier</a></li>
                     </ul>
                 </div>
             </div>

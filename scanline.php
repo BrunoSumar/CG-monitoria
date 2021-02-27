@@ -49,7 +49,7 @@
                         };<br>
 
                     </div>
-                    <p>Clique nos vétices para alterar seus valores.</p>
+                    <p>Clique nos vértices para alterar seus valores.</p>
 
                     <!-- Canvas -->
                     <div id="scanline" class="canvasHolder wide tall">   </div>

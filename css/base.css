@@ -79,25 +79,25 @@ body{
 }
 
 /*animações do menu */
-@keyframes submenu-ras {
-  from {height: 1.2em; margin-bottom: 1em;}
-  to {height: 7.7em; margin-bottom: 0em;}
-}
-li.rasterizacao:hover{
-    animation-name: submenu-ras;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-}
+/* @keyframes submenu-ras { */
+/*   from {height: 1.2em; margin-bottom: 1em;} */
+/*   to {height: 8.2em; margin-bottom: 0em;} */
+/* } */
+/* li.rasterizacao:hover{ */
+/*     animation-name: submenu-ras; */
+/*     animation-duration: 0.4s; */
+/*     animation-fill-mode: forwards; */
+/* } */
 
-@keyframes submenu-trans {
-  from {height: 1.2em; margin-bottom: 1em;}
-  to {height: 3.2em; margin-bottom: 0em;}
-}
-li.transformacao:hover{
-    animation-name: submenu-trans;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-}
+/* @keyframes submenu-trans { */
+/*   from {height: 1.2em; margin-bottom: 1em;} */
+/*   to {height: 5.2em; margin-bottom: 0em;} */
+/* } */
+/* li.transformacao:hover{ */
+/*     animation-name: submenu-trans; */
+/*     animation-duration: 0.4s; */
+/*     animation-fill-mode: forwards; */
+/* } */
 
 /*---------------------
         Centro
