@@ -22,7 +22,7 @@
                 <div class="breadcrumbs">
                     <a class="path" href="./index.php">Home</a> /
                     <a class="path" href="./rasterizacao.php">Rasterização</a> /
-                    <p class="path">Curvas</p>
+                    <p class="path">Curva de Bézier</p>
                 </div>
                 <hr>
                 <!-- separar conteudo em .blocos -->
