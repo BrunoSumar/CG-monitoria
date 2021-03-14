@@ -33,12 +33,19 @@ const cisalhamento =  (cx, cy) => [[1 ,cx,0],
                              [0 , 0,1]];
 
 const drawFig = function(c, fig) {
-    let i = 0;
+    let i = 0, len = 0;
+    for(len=fig.length;i<len;i++){
+        if(fig[i][0][2] == 0)
+            fig[i][0][2] = 0.0001;
+        fig[i][0][0] = fig[i][0][0]/fig[i][0][2];
+        fig[i][0][1] = fig[i][0][1]/fig[i][0][2];
+    }
+
     for(i=0;i<3;i++)
         c.line(fig[i][0][0],c.height-fig[i][0][1],fig[i+1][0][0],c.height-fig[i+1][0][1]);
     c.line(fig[i][0][0],c.height-fig[i][0][1],fig[0][0][0],c.height-fig[0][0][1]);
 
-    for(i++;i<fig.length-1;i++)
+    for(i++, len=fig.length-1;i<len;i++)
         c.line(fig[i][0][0],c.height-fig[i][0][1],fig[i+1][0][0],c.height-fig[i+1][0][1]);
     c.line(fig[i][0][0],c.height-fig[i][0][1],fig[4][0][0],c.height-fig[4][0][1]);
 }

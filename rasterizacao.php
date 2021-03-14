@@ -36,6 +36,7 @@
                         <li><a href="scanline.php">Scanline</a></li>
                         <h5 id="curvas">Curvas:</h5>
                         <li><a href="bezier.php">Curva de Bézier</a></li>
+                        <li><a href="hermite.php">Curva de Hermite</a></li>
                     </ul>
                 </div>
             </div>
